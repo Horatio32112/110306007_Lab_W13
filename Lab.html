@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div style="border: 2px rgb(6, 231, 55) solid;width:20%;margin-left:40%">
+		<h1>JS Caculator</h1>
+		  
+			<input type="text" id="num1"><br>
+			<input type="text" id="n2"><br>
+		<select name="Operate way?" id="w">  
+			<option value="+">+</option> 
+			<option value="-">-</option>  
+			<option value="*">*</option> 
+			<option value="/">/</option>  
+		</select>
+			<br><input type="button" value="add" onclick="compute()" id="b">
+			<p id="a">result=?</p>
+		
+
+	</div>
+	<script>
+
+		var op=document.getElementById("w");
+		function compute(){
+			var s=document.getElementById("num1");
+			var bb = document.getElementById("n2");
+			op = document.getElementById("w").value;
+			
+
+
+
+
+			if(op=="+"){
+				var ans=parseInt(s.value,10)+parseInt(bb.value,10)
+				document.getElementById("a").innerHTML="result = "+ ans;
+			}else if(op=="-"){
+				var ans=(parseInt(s.value,10))-(parseInt(bb.value,10));
+				document.getElementById("a").innerHTML="result = "+ ans;
+			}else if(op=="*"){
+				var ans=parseInt(s.value,10)*parseInt(bb.value,10)
+				document.getElementById("a").innerHTML="result = "+ans;
+			}else if(op=="/"&&n2!=0){
+				var ans=parseInt(s.value,10)/parseInt(bb.value,10)
+				document.getElementById("a").innerHTML="result = "+ans;
+			}else{
+				document.getElementById("a").innerHTML="error";
+			}
+
+
+
+		}
+		
+
+
+
+
+	</script>
+</body>
+</html>
